@@ -1,0 +1,78 @@
+---
+title: "Homework1"
+author: "svs2130"
+date: "9/19/2019"
+output: html_document
+---
+
+```{r Problem_1}
+library (tidyverse)
+
+#Problem 1
+
+set.seed(10)
+df= tibble(
+  random = rnorm(8),
+  vec_logical = random > 0,
+  vec_char = c("a", "b", "c", "d", "e", "f", "g", "h"),
+  vec_factor = as.factor(c(1,2,3,1,1,2,3,2))
+)
+
+#Since the argument is numeric, we get a value
+mean (pull(df, random)) #works
+
+#Since the argument is logical, we get a value
+mean (pull(df, vec_logical)) #works
+
+#Since the argument isn't numeric or logical, the result is NA
+mean (pull(df, vec_char)) #doesnt work
+
+#Since the argument is neither numberic nor logical, the result is NA
+mean (pull(df, vec_factor)) #doesnt work
+
+mean (as.numeric(pull(df, vec_char))) #doesnt work because cannot take mean of characters
+
+mean (as.numeric(pull(df, vec_factor))
+
+```
+
+```{r Problem_1}
+# second code chunk
+
+as.numeric(pull(df, vec_logical))*(pull(df, random))
+
+as.factor(pull(df,vec_logical))*(pull(df, random))
+
+as.numeric(as.factor(pull(df, vec_logical)))*(pull(df, random))
+
+```
+
+
+#Problem #2
+
+Creating ggplots
+
+```{r Problem2}
+
+set.seed(1)
+
+problem2_df = tibble(
+  x = rnorm(500),
+  y = rnorm(500),
+  vec_logical = c(x + y > 1),
+  vec_numeric = c(vec_logical),
+  vec_factor = c(vec_logical)
+)
+```
+
+
+The number of rows in our data set is **`r nrow(problem2_df)`**.
+The number of columns in our dataset is **5**
+The mean, median and Standard deviation of *x* are **0.02264409, 0.02264409 and 1.011928** respectively
+
+
+```{r scatter_plot}
+
+```
+
+
