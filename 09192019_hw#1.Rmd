@@ -63,10 +63,16 @@ mean(as.numeric(problem1_df$vec_factor))
      
 ```
 
+<<<<<<< HEAD
 ## Using variables from the dataframe **problem1_df** Multiplying different variables
 
 ```{r Problem_1second, warning=FALSE}
 
+=======
+
+
+```{r Problem_1second}
+>>>>>>> b81c61c40584e300d33f2792ded5e25d494fc790
 # second code chunk
 
 # Coercing logical vector as numeric and multiplying with Random variable
@@ -99,12 +105,16 @@ problem2_df = tibble(
 )
 ```
 
+<<<<<<< HEAD
 ### A short description of our dataframe
 
+=======
+>>>>>>> b81c61c40584e300d33f2792ded5e25d494fc790
 * The number of rows in our data set is **`r nrow(problem2_df)`**.
 * The number of columns in our dataset is **`r ncol(problem2_df)`**.
 * The mean, median and Standard deviation of *x* are **`r mean(problem2_df$x)`, `r median(problem2_df$x)` and `r sd(problem2_df$x)`** respectively
 * The proportion of cases for which the logical vector(x + y > 1) is true: **`r length(problem2_df$vec_logical[which(problem2_df$vec_logical == 'TRUE')]) / nrow(problem2_df)`**.
+<<<<<<< HEAD
 
 ### Using the above dataframe **problem2_df** to create Scatter Plots
 
@@ -118,6 +128,8 @@ ggsave(filename = "C:/Users/shvar/OneDrive - cumc.columbia.edu/Data Science/P810
 
 # Creating a scatter plot using the numeric vector
 ggplot(problem2_df, aes(x = x, y = y, color = vec_numeric)) + geom_point()
+=======
+>>>>>>> b81c61c40584e300d33f2792ded5e25d494fc790
 
 # Creating a scatter plot using the factor vector
 ggplot(problem2_df, aes(x = x, y = y, color = vec_factor)) + geom_point()
