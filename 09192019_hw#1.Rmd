@@ -35,7 +35,9 @@ mean(as.numeric(pull(df, vec_factor)))
      
 ```
 
-```{r Problem_1secong}
+
+
+```{r Problem_1second}
 # second code chunk
 as.numeric(pull(df, vec_logical))*(pull(df, random))
 as.factor(pull(df,vec_logical))*(pull(df, random))
@@ -59,11 +61,10 @@ problem2_df = tibble(
 )
 ```
 
-
-The number of rows in our data set is **`r nrow(problem2_df)`**.
-The number of columns in our dataset is **5**
-The mean, median and Standard deviation of *x* are **0.02264409, 0.02264409 and 1.011928** respectively
-
+* The number of rows in our data set is **`r nrow(problem2_df)`**.
+* The number of columns in our dataset is **`r ncol(problem2_df)`**.
+* The mean, median and Standard deviation of *x* are **`r mean(problem2_df$x)`, `r median(problem2_df$x)` and `r sd(problem2_df$x)`** respectively
+* The proportion of cases for which the logical vector(x + y > 1) is true: **`r length(problem2_df$vec_logical[which(problem2_df$vec_logical == 'TRUE')]) / nrow(problem2_df)`**.
 
 ```{r scatter_plot}
 
